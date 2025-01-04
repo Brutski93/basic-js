@@ -27,7 +27,6 @@ function getDNSStats(domains) {
   for (let i = 0; i < domains.length; i++) {
     let arr = domains[i].split('.');
     arr = makeDom(arr);
-    console.log(arr);
     for (let j = 0; j < arr.length; j++) {
       if (obj[arr[j]] === undefined) obj[arr[j]] = 0;
       obj[arr[j]] += 1;
@@ -48,13 +47,3 @@ function makeDom(arr1) {
 module.exports = {
   getDNSStats
 };
-
-domains = [
-  'code.yandex.ru',
-  'music.yandex.ru',
-  'yandex.ru'
-  ]
-
-console.log(
-  getDNSStats(domains)
-);

@@ -31,7 +31,3 @@ function repeater(str, options) {
 module.exports = {
   repeater
 };
-
-console.log(
-  repeater('REPEATABLE_STRING', { repeatTimes: 2, addition: 'ADDITION', additionRepeatTimes: 3 })
-)

@@ -20,6 +20,3 @@ function getEmailDomain(email) {
 module.exports = {
   getEmailDomain
 };
-console.log(
-  getEmailDomain('   prettyandsimple@example.com    ')
-)

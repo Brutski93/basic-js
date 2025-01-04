@@ -20,10 +20,8 @@ const HALF_LIFE_PERIOD = 5730;
 function dateSample(sampleActivity) {
   const input = sampleActivity - 0;
   if (isNaN(input) || input > 15 || input <= 0 || typeof sampleActivity !== 'string') return false;
-  // if (input > 15 || input <= 0) throw new NotImplementedError('Not implemented');
   const a = Math.log(MODERN_ACTIVITY / input);
   const b = Math.log(2);
-  // console.log(a, b);
   let x = a / b;
   x = Math.ceil(x * HALF_LIFE_PERIOD);
   return x;
@@ -32,7 +30,3 @@ function dateSample(sampleActivity) {
 module.exports = {
   dateSample
 };
-
-console.log(
-  dateSample('-3')
-)
